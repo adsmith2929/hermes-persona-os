@@ -26,7 +26,7 @@ Text inside code blocks in the reference files is shown to the user exactly as w
    - A → show the Step 1c Original Soul Gallery. B → show the Step 1d Iconic Characters Gallery.
    - C or D → follow Quick Forge or Deep Forge in `references/soul-md-maker.md`, showing its question blocks exactly as written.
    - If the user names a soul or character directly, or asks to "tell me more", "blend X + Y", "show souls" or "show characters", or says "none of these fit", follow the notes under that gallery.
-3. **Find the soul text.** Use the Index at the top of `references/starter-packs.md` (choices 1 to 3), `references/souls-original.md` or `references/souls-iconic.md`. Read only the chosen section by its line range. Custom (5) uses `references/SOUL-template.md`. Forge uses the Generation Rules in `references/soul-md-maker.md`.
+3. **Find the soul text.** Each of `references/starter-packs.md` (choices 1 to 3), `references/souls-original.md` and `references/souls-iconic.md` starts with an Index table in its first 30 lines. Read only those lines first (offset 0, limit 30), then read only the chosen section by its line range (offset and limit). Never open one of these three files without an offset and limit. Custom (5) uses `references/SOUL-template.md`. Forge uses the Generation Rules in `references/soul-md-maker.md`.
 4. **Questions (Step 2).** Open `references/step2-questions.md`. Ask the matching block in one message, exactly as written. Use the defaults there for missing answers.
 5. **Draft (Step 3).** Follow `references/save-and-summary.md`:
    - Build the draft.
@@ -44,7 +44,7 @@ Text inside code blocks in the reference files is shown to the user exactly as w
 ## Pitfalls
 
 - **Paraphrasing.** Don't shorten, reorder, restyle or "improve" menus, questions, souls or the summary. Copy them.
-- **Loading whole soul files.** The two gallery files are roughly 14,000 and 22,000 tokens. With a 64K window, read one section by its line range from the Index.
+- **Loading whole soul files.** The two gallery files are roughly 14,000 and 22,000 tokens. With a 64K window, read lines 1 to 30 for the Index, then one section by its line range. Never open these files without an offset and limit.
 - **Writing too early.** Nothing is written before an explicit yes to "Save this draft? (yes/no)". No shell commands at any point; use the file tool.
 - **Touching existing files.** Never edit SOUL.md or overwrite any file. If the save name already exists, pick a new name (add -2, -3). "edit soul" and "edit persona" change the draft, not SOUL.md.
 - **Replacing SOUL.md.** Never write a draft over SOUL.md: the user's SOUL.md holds rules that must stay. Applying a draft means merging its voice sections into SOUL.md, and only when the user asks for that.
